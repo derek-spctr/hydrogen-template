@@ -1,27 +1,35 @@
-# TypeScript Example
-
-Hydrogen is a React framework and SDK that you can use to build fast and dynamic Shopify custom storefronts.
-
-[Check out the docs](https://shopify.dev/custom-storefronts/hydrogen)
-
-[Run this template in JavaScript on StackBlitz](https://stackblitz.com/github/Shopify/hydrogen/tree/dist/templates/hello-world-js?file=package.json)
-
-[Run this template in TypeScript on StackBlitz](https://stackblitz.com/github/Shopify/hydrogen/tree/dist/templates/hello-world-ts?file=package.json)
-
 ## Getting started
 
 **Requirements:**
 
-- Node.js version 16.14.0 or higher
-- Yarn
+- Node.js version 16.14.0 or higher.
+- [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) or npm.
+
+**Additional Materials:**
+
+[Hydrogen](https://shopify.dev/api/hydrogen/components) components are pre-renders components built by shopify that can be dropped into the store for easy usage.
+
+Preview [GraphQL](http://localhost:3000/graphql) queries before implementation while the server is running on defaul port (3000). If port is not running on port 3000 then update port to the correct implementation.
+
+## Environment setup
+
+Update `hydrogen.config.ts` with your shop's domain and Storefront API tokens.
+
+This project contains a .prettierrc file which defines how code will look once it has been saved.
+
+## In Development
+
+In order to run the development environment you will need to run:
 
 ```bash
-npm init @shopify/hydrogen@latest --template hello-world-ts
+yarn dev
 ```
 
-Remember to update `hydrogen.config.ts` with your shop's domain and Storefront API token!
+Tailwind has be setup to run automatically during development mode.
 
 ## Building for production
+
+This command will build the TypeScript files into a distribution [dist] file which can be used for production.
 
 ```bash
 yarn build
